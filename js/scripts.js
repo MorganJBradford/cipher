@@ -1,19 +1,23 @@
 $(document).ready(function() {
-  const sentence = prompt("Enter sentence");
+  const userSentence = prompt("Enter sentence");
+  
+  function capLetters() {
+    return userSentence.charAt(0).toUpperCase() + userSentence.charAt(userSentence.length-1).toUpperCase();
+  }
+  alert(capLetters(userSentence));
+  
   const firstLetter = sentence.charAt(0);
   const lastLetter = sentence.charAt(sentence.length-1);
-    
-  function capLetters() {
-    return firstLetter.toUpperCase() + lastLetter.toUpperCase();
-  }
+  
+  
 
+  
+  
   function switchLetters() {
     return lastLetter + firstLetter;
   }
   
-  function capSwitch() {
-    return lastLetter.toUpperCase() + firstLetter.toUpperCase();
-  }
+  const capSwitch = capLetters(switchLetters());
 
   alert(capLetters(sentence));
   alert(switchLetters(sentence));
