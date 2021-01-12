@@ -10,11 +10,17 @@ $(document).ready(function() {
   }
 
   const capResults = capLetters();
-  const swapResults = swapLetters()
 
-  function capSwap() {
-    return capResults.charAt(capResults.length-1) + capResults.charAt(0);
+  function capThenSwap() {
+    return userSentence + capResults.charAt(capResults.length-1) + capResults.charAt(0);
   }
+
+  function divideUserSentence() {
+    return Math.floor(userSentence.length / 2);
+  }
+
   
-  alert(capSwap(userSentence));
+  alert(divideUserSentence())
+
+  alert(capThenSwap(userSentence));
 });
