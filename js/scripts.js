@@ -4,22 +4,17 @@ $(document).ready(function() {
   function capLetters() {
     return userSentence.charAt(0).toUpperCase() + userSentence.charAt(userSentence.length-1).toUpperCase();
   }
-  alert(capLetters(userSentence));
-  
-  const firstLetter = sentence.charAt(0);
-  const lastLetter = sentence.charAt(sentence.length-1);
-  
-  
 
-  
-  
-  function switchLetters() {
-    return lastLetter + firstLetter;
+  function swapLetters() {
+    return userSentence.charAt(userSentence.length-1) + userSentence.charAt(0);
+  }
+
+  const capResults = capLetters();
+  const swapResults = swapLetters()
+
+  function capSwap() {
+    return capResults.charAt(capResults.length-1) + capResults.charAt(0);
   }
   
-  const capSwitch = capLetters(switchLetters());
-
-  alert(capLetters(sentence));
-  alert(switchLetters(sentence));
-  alert(capSwitch(sentence));
+  alert(capSwap(userSentence));
 });
